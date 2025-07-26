@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
-import { dbClient, dbConn } from "@db/client.ts";
-import { todoTable } from "@db/schema.ts";
+import { dbClient, dbConn } from "backend/db/client.js";
+import { todoTable } from "backend/db/schema.js";
 
 async function insertData() {
   await dbClient.insert(todoTable).values({
